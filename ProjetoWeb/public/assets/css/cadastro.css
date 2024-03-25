@@ -1,0 +1,13 @@
+.cardCadastro{
+  height: 500px !important;
+}
+
+h5{
+  font-weight: 900;
+}
+
+.inputsCadastro{
+  margin-right: 80px;
+  /* padding-top: 0.5rem;
+  padding-bottom: 0.5rem; */
+}
