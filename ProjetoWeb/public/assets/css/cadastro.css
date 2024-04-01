@@ -32,12 +32,10 @@ label{
   margin-top: 5px;
 }
 
-.inputsCadastro input[type="date"]{
-  /* padding-right: 79px; */
-}
 
-label[for="DataNascimento"] {
-  width: 300px;
+
+label[for="CorfirSenhaCadastro"] {
+  width: 180px;
 }
 
 .inputsCadastro input::placeholder {
