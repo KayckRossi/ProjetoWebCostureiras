@@ -26,11 +26,14 @@ medidas double,
 foreign key (id_endereco) references endereco(id_endereco)
 );
 
-create table usuario(
-id_usuario int primary key not null auto_increment,
-nome varchar(255),
-senha varchar(255)
+CREATE TABLE usuario(
+id_usuario INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+nome VARCHAR(255),
+senha VARCHAR(255),
+telefone VARCHAR(20),
+endereco VARCHAR(255)
 );
+
 
 create table pedido(
 id_pedido int primary key not null auto_increment,

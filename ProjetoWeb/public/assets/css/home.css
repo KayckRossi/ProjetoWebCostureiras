@@ -1,5 +1,6 @@
+@import"../css/reset.css";
 .homepage {
-  width: 100vw;
+  width: 100%;
   height: 55vh;
 }
 
@@ -8,10 +9,7 @@
   margin-left: 280px;
 }
 
-@font-face {
-  font-family: 'Balmy';
-  src: url(../fonts/Balmy-Beta.ttf);
-}
+
 
 .titleHome {
   text-align: center;
@@ -68,4 +66,39 @@
 
 .imgLoca{
   margin-left: 100px;
+}
+
+@media screen and (max-width: 1366px){
+ 
+
+  .collapse {
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+  }
+
+  .homepage {
+    width: 100vw;
+    height: 40vh;
+  }
+
+  #imgLogin {
+    margin-top: -6rem;
+  }
+
+  .imgZap {
+    margin-top: 40px;
+    margin-bottom: 10px;
+  }
+  
+  #btn-HomeCadastro {
+    background-color: #000000;
+    height: 60px;
+    width: 190px;
+    border-radius: 0;
+    margin-left: -70px;
+  }
+
+  .card-body{
+    margin-top: -30px;
+  }
 }

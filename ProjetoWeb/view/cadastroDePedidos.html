@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/cadastroPedido.css">
+  <script src="/assets/plugins/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="/assets/plugins/node_modules/jquery/dist/jquery.js"></script>
+  <script src="/assets/plugins/node_modules/jquery-ui/dist/jquery-ui.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+  <script src="/assets/plugins/node_modules/sweetalert2/dist/sweetalert2.js"></script>
+  <script src="/assets/scripts/criarContaCliente.js"></script>
+
+
+  <title>Cadastro Pedido</title>
+</head>
+
+<body>
+
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-dark p-4">
+      <h5 class="text-white h4">Teste</h5>
+      <span class="text-muted">testetetet</span>
+    </div>
+  </div>
+  <nav class="navbar navbar-light bg-dark">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+  <img src="../assets/images/ImgLogoHome.png" class="logoHome">
+  <img src="../assets/images/imgManequinPedido.png" class="imgManequinPedido">
+  <section class="" style="background-color: #fff;">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-8 card border-0">
+          <div class="card-body cardCadPedido">
+            <h1 class="card-title text-center titlePedido"> <img src="../assets/images/imgCadPedido.png"
+                class="ImgPedidos">Cadastro Pedidos</h1>
+            <form id="registroForm" method="POST">
+              <div class="row">
+                <div class="col-6 ">
+                  <label for="Cadpedido">Pedido</label>
+                  <select class="inputsCadPedido">
+                    <option selected>Selecione o seu pedido</option>
+                    <option value="1">Pedido 1</option>
+                    <option value="2">Pedido 2</option>
+                    <option value="3">Pedido 3</option>
+                  </select>
+                </div>
+                <div class="col-6 ">
+                  <label for="CadPedMedida">Medidas</label>
+                  <input type="number" name="CadPedMedida" class="inputsCadPedido" id="CadPedMedida">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-6 ">
+                  <label for="CadPedValor">Valor</label>
+                  <input type="number" name="CadPedValor" class="inputsCadPedido" id="CadPedValor">
+                </div>
+                <div class="col-6">
+                  <label for="enderecoCriarConta">Quantidade</label>
+                  <input type="number" name="enderecoCriarConta" class="inputsCadPedido" id="enderecoCriarConta ">
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-around btns" style="margin-top: 20px;">
+                <button type="submit" class="btn btn-dark btn-Pedido">Excluir</button>
+                <button type="submit" class="btn btn-dark btn-Pedido">Salvar</button>
+                <button type="submit" class="btn btn-dark btn-Pedido">Sair</button>
+              </div>
+    
+          </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+    </div>
+    </div>
+
+  </section>
+  <script src="/assets/scripts/global.js"></script>
+</body>
+
+</html>

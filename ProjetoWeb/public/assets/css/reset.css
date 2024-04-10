@@ -1,3 +1,5 @@
+@import url(../plugins/node_modules/bootstrap/dist/css/bootstrap.css);
+@import url(../plugins/node_modules/sweetalert2/dist/sweetalert2.css);
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +8,7 @@
 
 html, body {
   height: 100%;
+  width: 100vw;
   font-family: 'Questrial', sans-serif;
 }
 
@@ -14,7 +17,14 @@ html, body {
   src: url("../fonts/Questrial-Regular.ttf");
 }
 
+@font-face {
+  font-family: 'Balmy';
+  src: url(../fonts/Balmy-Beta.ttf);
+}
 
+h1{
+  font-family: 'Balmy';
+}
 .bg-dark {
   background-color: #FFD3D3 !important;
 }
@@ -23,3 +33,22 @@ html, body {
   fill: #ff0000; /* cor vermelha como exemplo */
 }
 
+/* li::marker{
+  font-size: 2rem !important;
+} */
+
+ul li {
+  list-style: none;
+}
+
+li{
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 1440px) {
+
+}
+
+body.menu-open {
+  overflow: hidden;
+}

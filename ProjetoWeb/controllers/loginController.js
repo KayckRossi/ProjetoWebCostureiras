@@ -1,24 +1,55 @@
-const loginRepository = require('../repositories/loginRepository');
+const loginModel = require('../model/loginModel');
 
 module.exports = {
     fazerLogin: function (req, res) {
-        // Captura os dados do formulário
         const nome = req.body.nome;
         const senha = req.body.senha;
 
-        // Chama o método do repositório para fazer o login
-        loginRepository.fazerLogin(nome, senha, (err, result) => {
+        loginModel.fazerLogin(nome, senha, (err, result) => {
             if (err) {
                 console.error('Erro ao fazer login:', err);
                 res.status(500).send('Erro interno do servidor');
             } else {
                 if (result.length > 0) {
-                    // Se o nome de usuário e a senha estiverem corretos, retorna 'success'
                     res.status(200).send('success');
                 } else {
-                    // Se não houver correspondência no banco de dados, retorna 'failure'
                     res.status(200).send('failure');
                 }
+            }
+        });
+    },
+    fazerLoginCostureira: function (req, res) {
+        const nome = req.body.nome;
+        const senha = req.body.senha;
+    
+        loginModel.fazerLoginCostureira(nome, senha, (err, result) => {
+            if (err) {
+                console.error('Erro ao fazer login:', err);
+                res.status(500).send('Erro interno do servidor');
+            } else {
+                if (result.length > 0) {
+                    // Se o nome de usuário e a senha estiverem corretos, verifica se o usuário é um administrador
+                    if (result[0].isAdmin) {
+                        res.status(200).send('success-admin');
+                    } else {
+                        res.status(200).send('success');
+                    }
+                } else {
+                    res.status(200).send('failure');
+                }
+            }
+        });
+    },
+    
+    promoverAdmin: function (req, res) {
+        const nome = req.body.nome;
+
+        loginModel.promoverAdmin(nome, (err, result) => {
+            if (err) {
+                console.error('Erro ao promover usuário:', err);
+                res.status(500).send('Erro interno do servidor');
+            } else {
+                res.status(200).send('Usuário promovido a administrador com sucesso');
             }
         });
     }
