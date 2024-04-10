@@ -1,5 +1,4 @@
-// loginController.js
-const db = require('../database/config');
+const loginRepository = require('../repositories/loginRepository');
 
 module.exports = {
     fazerLogin: function (req, res) {
@@ -7,10 +6,8 @@ module.exports = {
         const nome = req.body.nome;
         const senha = req.body.senha;
 
-        // Consulta no banco de dados para verificar se o nome de usuário e a senha correspondem
-        // (Você precisará implementar essa lógica de acordo com a estrutura do seu banco de dados)
-        // Exemplo de consulta:
-        db.query('SELECT * FROM usuarios WHERE nome = ? AND senha = ?', [nome, senha], (err, result) => {
+        // Chama o método do repositório para fazer o login
+        loginRepository.fazerLogin(nome, senha, (err, result) => {
             if (err) {
                 console.error('Erro ao fazer login:', err);
                 res.status(500).send('Erro interno do servidor');

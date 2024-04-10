@@ -16,6 +16,9 @@ router.get('/cadastro', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'view', 'cadastro.html'));
 });
 
+router.get('/bemvindo', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'view', 'bemvindo.html'));
+})
 
 // Rota para lidar com o formulário de cadastro (método POST)
 router.post('/cadastro', cadastroController.cadastrarUsuario);

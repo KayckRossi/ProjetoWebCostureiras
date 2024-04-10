@@ -24,7 +24,7 @@ $(document).ready(function () {
           success: function (response) {
               // Verifica a resposta do servidor e redireciona para a página inicial se o login for bem-sucedido
               if (response === 'success') {
-                  window.location.href = '/homepage';
+                  window.location.href = '/home';
               } else {
                   alert('Nome de usuário ou senha incorretos. Por favor, tente novamente.');
               }
