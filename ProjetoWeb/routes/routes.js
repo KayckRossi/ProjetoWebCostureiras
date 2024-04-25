@@ -25,6 +25,10 @@ router.get('/cadastroPedido', (req, res) => {
     res.sendFile(path.join(__dirname,'..', 'view', 'cadastroDePedidos.html'));
 });
 
+router.get('/emitidos', (req, res) => {
+    res.sendFile(path.join(__dirname,'..', 'view', 'pedidosEmitidos.html'));
+});
+
 router.get('/bemvindo', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'view', 'bemvindo.html'));
 });

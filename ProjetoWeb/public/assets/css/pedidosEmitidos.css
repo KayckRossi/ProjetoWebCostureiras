@@ -1,0 +1,48 @@
+@import"../css/reset.css";
+
+.card{
+  border:none !important;
+}
+
+.inputnumPedido{
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin-left: 50px;
+}
+
+.labelNum, .labelNome{
+  font-size: xx-large;
+}
+
+.labelNome{
+  margin-left: 70px;
+}
+.imgCostureira {
+  position: absolute;
+  right: 0;
+  top: 50px; /* Ajuste este valor para mover a imagem para cima ou para baixo */
+}
+
+.titleEmitidos{
+  font-family: 'Balmy';
+  font-weight: 900;
+  color: #000000;
+  font-size:70px;
+  margin-top: -110px;
+}
+
+.inputnNomePedido{
+  display: block;
+  width: 400px;
+  height: 80px;
+  margin-left: 15px;
+}
+
+.campos{
+  margin-top: 100px;
+}
+
+.inputnumPedido, .inputnNomePedido{
+  margin-top: 30px;
+}
