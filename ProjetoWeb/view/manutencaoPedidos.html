@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/manutencaoPedido.css">
+  <script src="/assets/plugins/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="/assets/plugins/node_modules/jquery/dist/jquery.js"></script>
+  <script src="/assets/plugins/node_modules/jquery-ui/dist/jquery-ui.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+  <script src="/assets/plugins/node_modules/sweetalert2/dist/sweetalert2.js"></script>
+  <script src="/assets/scripts/criarContaCliente.js"></script>
+
+  <title>Cadastro Pedido</title>
+</head>
+
+<body>
+
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-dark p-4">
+      <h5 class="text-white h4">Teste</h5>
+      <span class="text-muted">testetetet</span>
+    </div>
+  </div>
+  <nav class="navbar navbar-light bg-dark">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+  <img src="../assets/images/ImgLogoHome.png" class="logoHome">
+  <section class="" style="background-color: #fff;">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <h1 class="text-center titlePedido"> <img src="../assets/images/imgManutencaoPedido.png"
+            class="ImgPedidos">Cadastro Pedidos</h1>
+        <div class="col-md-6 card border-0 ladoesquerdo">
+          <form id="registroForm" method="POST">
+            <div class="card-body cardManuPedido">
+              <div class="row">
+                <div class="col-4">
+                  <div class="form-group">
+                    <label for="numPedido" class="labelNum">N° PEDIDOS</label>
+                    <input type="text" name="numPedido" id="numPedido" class="inputnumPedido">
+                  </div>
+                </div>
+                <div class="col-4">
+                  <button type="submit" class="btn btn-dark col-9 btnExecutar" id="btn-executar">Execultar</button>
+                </div>
+              </div>
+
+              <div class="row">
+                <button type="submit" class="btn btn-dark col-3 btnStatus" id="btn-status">Status :</button>
+                <span class="spanStatus" id="status"><h5 class="text-center">FINALIZADO, EM ANDAMENTO, ABERTO</h5></span>
+
+                <div class="row btns">
+                  <div class="col-6">
+                    <button type="submit" class="btn btn-dark col-9 btnCalAtt" id="btn-cadastro">Calcular</button>
+                  </div>
+                  <div class="col-6">
+                    <button type="submit" class="btn btn-dark col-9 btnCalAtt" id="btn-cadastro">Atualizar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="col-md-6 ladoDireito">
+          <div class="row">
+            <label for="manuPedidoNome" class="labels nome">Nome</label>
+            <input type="text" name="CadPedMedida" class="inputsManuPedido" id="manuPedidoNome">
+            <label for="manuPedidoQtd" class="labels">Quantidade</label>
+            <input type="number" name="manuPedidoQtd" class="inputsManuPedido" id="manuPedidoQtd">
+            <label for="manuPedidoFormPagamento" class="labels">Forma de pagamento</label>
+            <input type="number" name="manuPedidoFormPagamento" class="inputsManuPedido" id="manuPedidoFormPagamento">
+            <label for="manuPedidoValor" class="labels">Valor</label>
+            <input type="number" name="manuPedidoValor" class="inputsManuPedido" id="manuPedidoValor">
+            <label for="manuPedidoValorTotal" class="labels">Valor total</label>
+            <input type="number" name="manuPedidoValorTotal" class="inputsManuPedido" id="manuPedidoValorTotal">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <script src="/assets/scripts/global.js"></script>
+</body>
+
+</html>

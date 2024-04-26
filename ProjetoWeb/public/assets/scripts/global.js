@@ -3,6 +3,7 @@ $(document).ready(function () {
     $('body').toggleClass('menu-open');
     $('.imgLoginCostuUm').toggleClass('menu-open-img');
     $('.imgCriarConta1').toggleClass('menu-open-img');
+    $('.imgEmitidoUm').toggleClass('menu-open-img');
   });
 
   $('#btn-HomeCadastro').click(function (event) {

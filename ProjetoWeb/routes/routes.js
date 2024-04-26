@@ -25,6 +25,14 @@ router.get('/cadastroPedido', (req, res) => {
     res.sendFile(path.join(__dirname,'..', 'view', 'cadastroDePedidos.html'));
 });
 
+router.get('/manutencaoPedido', (req, res) => {
+    res.sendFile(path.join(__dirname,'..', 'view', 'manutencaoPedidos.html'));
+});
+
+router.get('/manutencaoCliente', (req, res) => {
+    res.sendFile(path.join(__dirname,'..', 'view', 'manutencaoCliente.html'));
+});
+
 router.get('/emitidos', (req, res) => {
     res.sendFile(path.join(__dirname,'..', 'view', 'pedidosEmitidos.html'));
 });
