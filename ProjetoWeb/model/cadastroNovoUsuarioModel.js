@@ -1,4 +1,3 @@
-
 const db = require('../database/config');
 
 module.exports = {
@@ -9,7 +8,3 @@ module.exports = {
   
   // Adicione outras funções conforme necessário, como buscarUsuarioPorEmail, atualizarUsuario, etc.
 };
-
-
-
-

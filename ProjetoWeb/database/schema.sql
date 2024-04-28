@@ -9,29 +9,29 @@ nome_produto varchar(255),
 valor double
 );
 
-create table endereco(
-id_endereco int primary key not null auto_increment,
-endereco varchar(255),
-cep varchar(255)
-);
-
 create table cliente(
 id_cliente int primary key not null auto_increment,
 nome_cliente varchar(255),
 telefone varchar(30),
-id_endereco int,
+senha VARCHAR(255),
 endereco varchar(255),
 medidas double,
 
 foreign key (id_endereco) references endereco(id_endereco)
 );
 
-CREATE TABLE usuario(
-id_usuario INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-nome VARCHAR(255),
-senha VARCHAR(255),
-telefone VARCHAR(20),
-endereco VARCHAR(255)
+-- CREATE TABLE usuario(
+-- id_usuario INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+-- nome VARCHAR(255),
+-- senha VARCHAR(255),
+-- telefone VARCHAR(20),
+-- endereco VARCHAR(255)
+-- );
+
+create table usuario(
+id_usuario int primary key not null auto_increment,
+nome varchar(255),
+senha varchar(255)
 );
 
 

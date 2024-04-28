@@ -1,8 +1,8 @@
 const express = require('express');
 const path = require('path');
 const router = express.Router();
-const cadastroClienteController = require('../controllers/criarContaClienteController.js');
-const cadastroUsuarioController = require('../controllers/cadastroNovoUsuarioController.js');
+const cadastroClienteController = require('../controllers/cadastroClienteController.js');
+const cadastroUsuarioAdmController = require('../controllers/cadastrarUsuarioAdmController.js');
 const loginController = require('../controllers/loginController');
 
 router.get('/login', (req, res) => {
@@ -13,12 +13,12 @@ router.get('/home', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'view', 'homepage.html'));
 });
 
-router.get('/cadastroUsuario', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'view', 'cadastroNovoUsuario.html'));
+router.get('/cadastroCliente', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'view', 'cadastroCliente.html'));
 });
 
-router.get('/cadastroCliente', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'view', 'cadastroClienteAdm.html'));
+router.get('/cadastroUsuario', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'view', 'cadastroUsuarioAdm.html'));
 });
 
 router.get('/cadastroPedido', (req, res) => {
@@ -49,7 +49,7 @@ router.get('/sobrenos', (req, res) => {
 // Rota para lidar com o formulário de cadastro (método POST)
 router.post('/cadastroCliente', cadastroClienteController.cadastrarCliente);
 
-router.post('/cadastroUsuarioAdm',cadastroUsuarioController.cadastrarUsuario)
+// router.post('/cadastroUsuarioAdm',cadastroUsuarioAdmController.cadastrarUsuario)
 
 router.post('/login', loginController.fazerLogin);
 

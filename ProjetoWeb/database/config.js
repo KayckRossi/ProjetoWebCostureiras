@@ -7,9 +7,10 @@ const connection = mysql.createConnection({
   user: 'root',
   password: '',
   database: 'banco_costureira',
-  port: 3306
+  port: 3307
 });
 
 connection.connect();
 
 module.exports = connection;
+

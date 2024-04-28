@@ -52,3 +52,8 @@ li{
 body.menu-open {
   overflow: hidden;
 }
+
+.btn-dark:hover{
+  background-color: #FFD3D3!important;
+  color: #000000!important;
+}
