@@ -15,9 +15,7 @@ nome_cliente varchar(255),
 telefone varchar(30),
 senha VARCHAR(255),
 endereco varchar(255),
-medidas double,
-
-foreign key (id_endereco) references endereco(id_endereco)
+medidas decimal(5,2)
 );
 
 -- CREATE TABLE usuario(
