@@ -18,10 +18,10 @@ $(document).ready(function () {
       return;
     }
     
-    if (!senha.match(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/)) {
-      Swal.fire('Erro', 'A senha deve conter pelo menos 8 caracteres, incluindo pelo menos 1 letra e 1 número', 'error');
-      return;
-    }
+    // if (!senha.match(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/)) {
+    //   Swal.fire('Erro', 'A senha deve conter pelo menos 8 caracteres, incluindo pelo menos 1 letra e 1 número', 'error');
+    //   return;
+    // }
 
     // Validação para medidas
     // if (!medidas || medidas <= 0) {

@@ -1,5 +1,6 @@
 @import url(../plugins/node_modules/bootstrap/dist/css/bootstrap.css);
 @import url(../plugins/node_modules/sweetalert2/dist/sweetalert2.css);
+@import url(../plugins/node_modules/select2/dist/css/select2.css);
 * {
   margin: 0;
   padding: 0;

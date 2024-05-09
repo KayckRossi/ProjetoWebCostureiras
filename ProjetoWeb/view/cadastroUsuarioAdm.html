@@ -10,7 +10,7 @@
   <script src="/assets/plugins/node_modules/jquery-ui/dist/jquery-ui.js"></script>
   <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
   <script src="/assets/plugins/node_modules/sweetalert2/dist/sweetalert2.js"></script>
-  <script src="/assets/scripts/criarContaCliente.js"></script>
+  <script src="/assets/scripts/cadastroNovoUsuarioAdm.js.js"></script>
 
 
   <title>Cadastro</title>
@@ -20,8 +20,37 @@
 
   <div class="collapse" id="navbarToggleExternalContent">
     <div class="bg-dark p-4">
-      <h5 class="text-white h4">Teste</h5>
-      <span class="text-muted">testetetet</span>
+
+      <div class="conteiner-fluid text-center">
+        <div class="row d-flex justify-content-center"> <!-- Adicionado justify-content-center -->
+          <div class="col">
+            <h5 class="titleMenus">Cadastrar<h5>
+            <ul>
+              <li><a href="./cadastroUsuario">Cliente</a></li>
+              <li><a href="./cadastroPedido">Pedidos</a></li>
+            </ul>
+          </div>
+
+          <div class="col">
+            <h5 class="titleMenus">Movimentação
+            </h5>
+            <ul>
+              <li><a href="/emitidos">Pedidos Emitidos</a></li>
+              <li><a href="./manutencaoPedido">Manutenção Pedidos</a></li>
+              <li><a href="./manutencaoCliente">Manutenção Cliente</a></li>
+            </ul>
+          </div>
+
+          <div class="col">
+            <h3>Ajuda</h3>
+            <ul>
+              <li><a href="./sobrenos">Sobre nós</a></li>
+              <li><a href="https://wa.link/jf45be">Whatsapp</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
   <nav class="navbar navbar-light bg-dark">
@@ -45,7 +74,7 @@
                 class="imgUsuario" alt="">cadastro usuario</h1>
 
             <form id="registroForm" method="POST">
-              <div class="row camposCadPedido">
+              <div class="row">
                 <div class="col-md-3">
                   <label for="nomeCadastroCliente">Nome</label>
                 </div>
@@ -53,7 +82,7 @@
                   <input type="text" id="nomeCadastroCliente" class=" inputsCadCliente">
                 </div>
               </div>
-              <div class="row camposCadPedido">
+              <div class="row camposCad">
                 <div class="col-md-3">
                   <label for="telefoneCadastroCliente">Telefone</label>
                 </div>
@@ -61,7 +90,7 @@
                   <input type="number" id="telefoneCadastroCliente" class=" inputsCadCliente">
                 </div>
               </div>
-              <div class="row camposCadPedido">
+              <div class="row camposCad">
                 <div class="col-md-3">
                   <label for="enderecoCadastroCliente">Endereço</label>
                 </div>
@@ -74,7 +103,7 @@
                   <label for="medidasCadastroCliente">Medidas</label>
                 </div>
                 <div class="col-md-9">
-                  <input type="number" id="medidasCadastroCliente" class=" inputsCadCliente">
+                  <input type="text" id="medidasCadastroCliente" class=" inputsCadCliente">
                 </div>
               </div>
               <div class="row">

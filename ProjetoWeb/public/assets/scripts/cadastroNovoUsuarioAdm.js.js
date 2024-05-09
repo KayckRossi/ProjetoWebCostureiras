@@ -2,16 +2,16 @@ $(document).ready(function () {
   $('#registroForm').submit(function (event) {
     event.preventDefault();
 
-    var nome = $('#nomeCriarConta').val();
-    var telefone = $('#telefoneCriarConta').val();
-    var endereco = $('#enderecoCriarConta').val();
-    var medidas = $('#medidasCadastroCliente').val(); // Adicionado
+    var nome = $('#nomeCadastroCliente').val();
+    var telefone = $('#telefoneCadastroCliente').val();
+    var endereco = $('#enderecoCadastroCliente').val();
+    var medidas = $('#medidasCadastroCliente').val(); 
 
     // Validação adicional dos campos
-    if (!telefone.match(/^[0-9]{10,11}$/)) {
-      Swal.fire('Erro', 'Por favor, insira um número de telefone válido', 'error');
-      return;
-    }
+    // if (!telefone.match(/^[0-9]{10,11}$/)) {
+    //   Swal.fire('Erro', 'Por favor, insira um número de telefone válido', 'error');
+    //   return;
+    // }
 
     // Validação para medidas
     if (!medidas || medidas <= 0) {
