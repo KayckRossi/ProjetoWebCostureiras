@@ -16,6 +16,14 @@ $(document).ready(function () {
     window.location.href = '/login';
   });
   
+  const logoImages = $(".logoHome");
+  const homeLink = $("<a>").attr({
+    href: "./home",
+  });
+
+  logoImages.each(function() {
+    $(this).wrap(homeLink);
+  });
   
 });
 

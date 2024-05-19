@@ -12,47 +12,11 @@
   <script src="\assets\plugins\node_modules\select2\dist\js\select2.js"></script>
   <script src="/assets/scripts/cadastroPedido.js"></script>
 
-
   <title>Cadastro Pedido</title>
 </head>
 
 <body>
 
-  <div class="collapse" id="navbarToggleExternalContent">
-    <div class="bg-dark p-4">
-
-      <div class="conteiner-fluid">
-        <div class="row">
-
-          <div class="col">
-
-            <h3>Cadastrar</h3>
-            <ul>
-              <li><a href="./cadastroCliente">Cliente</a></li>
-              <li><a href="./cadastroPedido">Pedidos</a></li>
-            </ul>
-
-          </div>
-
-          <div class="col">
-            <h3>Movimentação</h3>
-            <ul>
-              <li><a href="./emitidosCliente">Pedidos</a></li>
-            </ul>
-          </div>
-
-          <div class="col">
-            <h3>Ajuda</h3>
-            <ul>
-              <li><a href="./sobrenos">Sobre nós</a></li>
-              <li><a href="https://wa.link/jf45be">Whatsapp</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
   <nav class="navbar navbar-light bg-dark">
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -62,6 +26,42 @@
       </button>
     </div>
   </nav>
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-dark p-4">
+
+      <div class="conteiner-fluid">
+        <div class="row">
+
+          <div class="col">
+
+            <h3>Cadastrar</h3>
+            <ul class="uLmenus">
+              <li><a href="./cadastroCliente">Cliente</a></li>
+              <li><a href="./cadastroPedido">Pedidos</a></li>
+            </ul>
+
+          </div>
+
+          <div class="col colMovi">
+            <h3>Movimentação</h3>
+            <ul class="uLmenus">
+              <li><a href="./emitidosCliente">Pedidos</a></li>
+            </ul>
+          </div>
+
+          <div class="col">
+            <h3 class="ajuda">Ajuda</h3>
+            <ul class="uLmenus">
+              <li><a href="./sobrenos">Sobre nós</a></li>
+              <li><a href="https://wa.link/jf45be">Whatsapp</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
 
   <img src="../assets/images/ImgLogoHome.png" class="logoHome">
   <img src="../assets/images/imgManequinPedido.png" class="imgManequinPedido">
@@ -73,16 +73,30 @@
             <h1 class="card-title text-center titlePedido"> <img src="../assets/images/imgCadPedido.png"
                 class="ImgPedidos">Cadastro Pedidos</h1>
             <form id="registroForm" method="POST">
+
               <div class="row">
-                <div class="col-6 ">
+                <div class="col-6">
+                  <label for="CadPedIdCliente">ID Cliente</label>
+                  <input type="text" name="CadPedIdCliente" class="inputsCadPedido" id="CadPedIdCliente">
+                </div>
+
+                <div class="col-md-6">
+                  <label for="CadPedDataRetirada">Data de Retirada</label>
+                  <input type="date" class="inputsCadPedido" id="CadPedDataRetirada" placeholder="Data de Retirada">
+                </div>
+        
+              </div>
+              <div class="row">
+
+                <div class="col-6">
                   <label for="Cadpedido">Pedido</label>
-                  <select id="selectProduto" class="inputsCadPedido" multiple>
+                  <select id="selectProduto" class="inputsCadPedido">
                     <option value="" selected>Selecione um produto</option>
                   </select>
                 </div>
-                <div class="col-6 ">
+                <div class="col-6">
                   <label for="CadPedMedida">Medidas</label>
-                  <input type="text" name="CadPedMedida" class="inputsCadPedido" id="CadPedMedida" readonly>
+                  <input type="text" name="CadPedMedida" class="inputsCadPedido" id="CadPedMedida">
                 </div>
               </div>
 
@@ -115,9 +129,9 @@
 
 
               <div class="d-flex justify-content-around btns" style="margin-top: 20px;">
-                <button type="submit" class="btn btn-dark btn-Pedido">Excluir</button>
-                <button type="submit" class="btn btn-dark btn-Pedido">Salvar</button>
-                <button type="submit" class="btn btn-dark btn-Pedido">Sair</button>
+                <button type="button" id="salvarBtn" class="btn btn-dark btn-Pedido">Salvar</button>
+                <button type="button" id="excluirBtn" class="btn btn-dark btn-Pedido">Excluir</button>
+                <button type="button" id="sairBtn" class="btn btn-dark btn-Pedido">Sair</button>
               </div>
             </form>
           </div>

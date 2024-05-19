@@ -5,19 +5,13 @@ $(document).ready(function () {
     var nome = $('#nomeCadastroCliente').val();
     var telefone = $('#telefoneCadastroCliente').val();
     var endereco = $('#enderecoCadastroCliente').val();
-    var medidas = $('#medidasCadastroCliente').val(); 
+
 
     // Validação adicional dos campos
     // if (!telefone.match(/^[0-9]{10,11}$/)) {
     //   Swal.fire('Erro', 'Por favor, insira um número de telefone válido', 'error');
     //   return;
     // }
-
-    // Validação para medidas
-    if (!medidas || medidas <= 0) {
-      Swal.fire('Erro', 'Por favor, insira uma medida válida', 'error');
-      return;
-    }
 
     $.ajax({
       url: '/cadastroUsuario',
@@ -26,7 +20,6 @@ $(document).ready(function () {
         nome: nome,
         telefone: telefone,
         endereco: endereco,
-        medidas: medidas // Adicionado
       },
       success: function (response) {
         Swal.fire('Sucesso', response, 'success');

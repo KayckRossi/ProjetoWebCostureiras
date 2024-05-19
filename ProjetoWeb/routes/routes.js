@@ -62,5 +62,6 @@ router.post('/login', loginController.fazerLogin);
 
 // Rota para obter a lista de produtos
 router.get('/produtos', pedidoController.obterProdutos);
+router.post('/cadastroPedido', pedidoController.salvarPedido);
 
 module.exports = router;

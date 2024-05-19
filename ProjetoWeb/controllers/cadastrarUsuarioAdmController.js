@@ -12,7 +12,6 @@ module.exports = {
             nome: req.body.nome,
             telefone: req.body.telefone,
             endereco: req.body.endereco,
-            medidas: req.body.medidas 
         };
 
         cadastrarCliente.inserirUsuario(novoUsuario, (err, result) => { // Alterado para cadastrarCliente

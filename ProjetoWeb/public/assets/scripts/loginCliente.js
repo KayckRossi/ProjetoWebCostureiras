@@ -34,10 +34,15 @@ $(document).ready(function () {
             },
             success: function (response) {
                 if (response === 'success') {
-                    Swal.fire('Sucesso', 'Login bem-sucedido', 'success')
-                        .then((value) => {
-                            window.location.href = '/home';
-                        });
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: "Login bem-sucedido",
+                        showConfirmButton: false,
+                        timer: 1500
+                    }).then(() => {
+                        window.location.href = '/home';
+                    });
                 } else {
                     Swal.fire('Erro', 'Nome de usuário ou senha incorretos. Por favor, tente novamente.', 'error');
                 }

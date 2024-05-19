@@ -1,20 +1,22 @@
 @import url(../plugins/node_modules/bootstrap/dist/css/bootstrap.css);
 @import url(../plugins/node_modules/sweetalert2/dist/sweetalert2.css);
 @import url(../plugins/node_modules/select2/dist/css/select2.css);
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100vw;
   font-family: 'Questrial', sans-serif;
 }
 
 @font-face {
-  font-family: 'Questrial' ;
+  font-family: 'Questrial';
   src: url("../fonts/Questrial-Regular.ttf");
 }
 
@@ -23,38 +25,93 @@ html, body {
   src: url(../fonts/Balmy-Beta.ttf);
 }
 
-h1{
+h1 {
   font-family: 'Balmy';
 }
+
 .bg-dark {
   background-color: #FFD3D3 !important;
 }
 
 .navbar-toggler-icon {
-  fill: #ff0000; /* cor vermelha como exemplo */
+  fill: #ff0000;
+  /* cor vermelha como exemplo */
 }
 
-/* li::marker{
+.uLmenus li::marker {
   font-size: 2rem !important;
-} */
+}
 
-ul li {
+.uLmenus {
   list-style: none;
 }
 
-li{
-  margin-top: 10px;
+.uLmenus li::before {
+  position: relative;
+  top: 10px;
+  content: "•";
+  /* Isso adiciona uma bolinha antes de cada item da lista */
+  font-size: 60px;
+  /* Isso ajusta o tamanho da bolinha */
+  color: rgb(7, 7, 7);
+  padding-right: 10px;
+  margin-top: 30px;
 }
 
-@media screen and (max-width: 1440px) {
-
+.ul li {
+  margin-top: -60px;
 }
 
 body.menu-open {
   overflow: hidden;
 }
 
-.btn-dark:hover{
-  background-color: #FFD3D3!important;
-  color: #000000!important;
+.btn-dark:hover {
+  background-color: #FFD3D3 !important;
+  color: #000000 !important;
+}
+
+.conteiner-fluid a {
+  text-decoration: none !important;
+  color: #000000 !important;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.conteiner-fluid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.colMovi {
+  margin-right: 550px;
+  margin-left: 550px;
+}
+
+.conteiner-fluid h3 {
+  /* width: 50px;
+  height: 50px;
+  background-color: aqua;
+  font-size: 30px;
+  font-weight: 600; */
+  background-color: #f2d0d0;
+  display: inline-block;
+  padding: 10px 20px;
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 2px solid #000000;
+  border-radius: 15px;
+}
+
+.conteiner-fluid .ajuda {
+  margin-left: 25px;
+}
+
+@media screen and (max-width: 1440px) {
+  .colMovi {
+    margin-right: 300px !important;
+    margin-left: 300px !important;
+  }
 }
