@@ -6,8 +6,11 @@ const cadastroClienteController = require('../controllers/cadastroClienteControl
 const cadastroUsuarioAdmController = require('../controllers/cadastrarUsuarioAdmController.js');
 const loginController = require('../controllers/loginController');
 const pedidoController = require('../controllers/cadastroPedidoController.js');
+const emitidoPedido = require('../controllers/emitidoPedidoController.js');
+const clienteManuController = require('../controllers/clienteManuController.js'); 
+const pedidoManuController = require('../controllers/pedidoManuController.js');
 
-
+// Rotas de páginas
 router.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'view', 'login.html'));
 });
@@ -52,16 +55,26 @@ router.get('/sobrenos', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'view', 'sobre.html'));
 });
 
-
 // Rota para lidar com o formulário de cadastro (método POST)
 router.post('/cadastroCliente', cadastroClienteController.cadastrarCliente);
-
-router.post('/cadastroUsuario',cadastroUsuarioAdmController.cadastrarUsuario)
+router.post('/cadastroUsuario', cadastroUsuarioAdmController.cadastrarUsuario);
+router.post('/cadastroClienteAdm', cadastroUsuarioAdmController.cadastrarClienteAdm);
 
 router.post('/login', loginController.fazerLogin);
 
 // Rota para obter a lista de produtos
 router.get('/produtos', pedidoController.obterProdutos);
 router.post('/cadastroPedido', pedidoController.salvarPedido);
+
+router.get('/emitidosAdm', emitidoPedido.obterPedidosEmitidos);
+
+// Rotas para manutenção de clientes
+router.get('/cliente/:id', clienteManuController.buscarCliente);
+router.put('/cliente/:id', clienteManuController.atualizarCliente);
+router.delete('/cliente/:id', clienteManuController.excluirCliente);
+
+router.get('/api/pedido/:id', pedidoManuController.buscarPedido);
+router.put('/api/pedido/:id', pedidoManuController.atualizarPedido);
+router.delete('/api/pedido/:id', pedidoManuController.excluirPedido);
 
 module.exports = router;

@@ -31,15 +31,14 @@ INSERT INTO `produto` (`id_produto`, `nome_produto`, `valor`) VALUES
 
 );
 
-CREATE TABLE cliente (
-    id_cliente INT AUTO_INCREMENT PRIMARY KEY,
-    nome_cliente VARCHAR(255) NOT NULL,
-    endereco_cliente VARCHAR(255),
-    telefone_cliente VARCHAR(20),
-    email_cliente VARCHAR(255),
-    medidas DECIMAL(5,2) -- Ajustando a coluna medidas para decimal
+create table cliente(
+id_cliente int primary key not null auto_increment,
+nome_cliente varchar(255),
+telefone varchar(30),
+senha VARCHAR(255),
+endereco varchar(255),
+medidas decimal(5,2)
 );
-
 -- CREATE TABLE usuario(
 -- id_usuario INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 -- nome VARCHAR(255),

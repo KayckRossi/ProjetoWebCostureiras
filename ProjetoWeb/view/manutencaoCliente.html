@@ -8,11 +8,10 @@
   <script src="/assets/plugins/node_modules/bootstrap/dist/js/bootstrap.js"></script>
   <script src="/assets/plugins/node_modules/jquery/dist/jquery.js"></script>
   <script src="/assets/plugins/node_modules/jquery-ui/dist/jquery-ui.js"></script>
-  <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
   <script src="/assets/plugins/node_modules/sweetalert2/dist/sweetalert2.js"></script>
-  <script src="/assets/scripts/criarContaCliente.js"></script>
+  <script src="/assets/scripts/clienteManutencao.js"></script>
 
-  <title>Cadastro Pedido</title>
+  <title>Manutenção cliente</title>
 </head>
 
 <body>
@@ -21,7 +20,7 @@
     <div class="bg-dark p-4">
 
       <div class="conteiner-fluid text-center">
-        <div class="row d-flex justify-content-center"> <!-- Adicionado justify-content-center -->
+        <div class="row d-flex justify-content-center">
           <div class="col">
             <h3 class="titleMenus">Cadastrar<h3>
             <ul>
@@ -31,8 +30,7 @@
           </div>
 
           <div class="col">
-            <h3 class="titleMenus">Movimentação
-            </h3>
+            <h3 class="titleMenus">Movimentação</h3>
             <ul>
               <li><a href="/emitidos">Pedidos Emitidos</a></li>
               <li><a href="./manutencaoPedido">Manutenção Pedidos</a></li>
@@ -66,59 +64,46 @@
   <section class="" style="background-color: #fff;">
     <div class="container">
       <div class="row d-flex justify-content-center">
-        <h1 class="text-center titlePedido"> <img src="../assets/images/imgManuCliente.png"
-            class="ImgPedidos">Cadastro Pedidos</h1>
+        <h1 class="text-center titlePedido"> <img src="../assets/images/imgManuCliente.png" class="ImgPedidos">Manutencao cliente</h1>
         <div class="col-md-6 card border-0 ladoesquerdo">
           <form id="registroForm" method="POST">
             <div class="card-body cardManuPedido">
               <div class="row">
                 <div class="col-4">
                   <div class="form-group">
-                    <label for="numPedido" class="labelNum">N° PEDIDOS</label>
-                    <input type="text" name="numPedido" id="numPedido" class="inputnumPedido">
-
-                    <button type="submit" class="btn btn-dark col-9 btnExecutar" id="btn-executar">Execultar</button>
+                    <label for="idClienteManun" class="labelNum">ID</label>
+                    <input type="text" name="idClienteManun" id="idClienteManun" class="inputnumPedido">
+                    <button type="submit" class="btn btn-dark col-9 btnExecutar" id="btn-executar">Executar</button>
                   </div>
                 </div>
               </div>
-
-           
             </div>
           </form>
         </div>
-
         <div class="col-md-6 ladoDireito">
           <div class="row">
             <label for="manuPedidoNome" class="labels nome">Nome</label>
-            <input type="text" name="CadPedMedida" class="inputsManuPedido" id="manuPedidoNome">
-            <label for="manuPedidoQtd" class="labels">Telefone</label>
-            <input type="number" name="manuPedidoQtd" class="inputsManuPedido" id="manuPedidoQtd">
-            <label for="manuPedidoFormPagamento" class="labels">Endereço</label>
-            <input type="number" name="manuPedidoFormPagamento" class="inputsManuPedido" id="manuPedidoFormPagamento">
-
+            <input type="text" name="manuPedidoNome" class="inputsManuPedido" id="manuPedidoNome">
+            <label for="manuPedidoTelefone" class="labels">Telefone</label>
+            <input type="number" name="manuPedidoTelefone" class="inputsManuPedido" id="manuPedidoTelefone">
+            <label for="manuPedidoEndereco" class="labels">Endereço</label>
+            <input type="text" name="manuPedidoEndereco" class="inputsManuPedido" id="manuPedidoEndereco">
           </div>
         </div>
-
-        <div class="row">
-
-          <div class="row btns">
-            <div class="col-3">
-              <button type="submit" class="btn btn-dark col-9 btnCalAtt" id="btn-cadastro">Alterar</button>
-            </div>
-            <div class="col-3">
-              <button type="submit" class="btn btn-dark col-9 btnCalAtt" id="btn-cadastro">Sair</button>
-            </div>
-
-            <div class="col-3">
-              <button type="submit" class="btn btn-dark col-9 btnCalAtt" id="btn-cadastro">Excluir</button>
-            </div>
+        <div class="row btns">
+          <div class="col-3">
+            <button type="submit" class="btn btn-dark col-9 btnCalAtt" id="btn-alterar">Alterar</button>
+          </div>
+          <div class="col-3">
+            <button type="button" class="btn btn-dark col-9 btnCalAtt" id="btn-sair">Sair</button>
+          </div>
+          <div class="col-3">
+            <button type="button" class="btn btn-dark col-9 btnCalAtt" id="btn-excluir">Excluir</button>
           </div>
         </div>
-
       </div>
     </div>
   </section>
   <script src="/assets/scripts/global.js"></script>
 </body>
-
 </html>

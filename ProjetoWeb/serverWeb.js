@@ -4,7 +4,6 @@ const express = require('express');
 const app = express();
 const port = 5500;
 const path = require('path');
-const db = require('./database/config');
 const crypto = require('crypto');
 const session = require('express-session');
 const routes = require('./routes/routes');
@@ -20,6 +19,8 @@ app.use(session({
 
 // Middleware para processar dados de formulário
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(bodyParser.json());
 
 // Define o diretório para os arquivos estáticos
 app.use(express.static(path.join(__dirname, 'public')));

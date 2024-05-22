@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,36 +7,27 @@
   <script src="/assets/plugins/node_modules/bootstrap/dist/js/bootstrap.js"></script>
   <script src="/assets/plugins/node_modules/jquery/dist/jquery.js"></script>
   <script src="/assets/plugins/node_modules/jquery-ui/dist/jquery-ui.js"></script>
-  <title>Bem vindo</title>
-
-
+  <script src="/assets/scripts/clientePedidos.js"></script> 
+  <title>Pedidos do Cliente</title>
 </head>
-
 <body>
-
   <div class="collapse" id="navbarToggleExternalContent">
     <div class="bg-dark p-4">
-
       <div class="conteiner-fluid">
         <div class="row">
-          
           <div class="col">
-
             <h3>Cadastrar</h3>
             <ul>
               <li><a href="./cadastroCliente">Cliente</a></li>
               <li><a href="./cadastroPedido">Pedidos</a></li>
             </ul>
-
           </div>
-
           <div class="col">
             <h3>Movimentação</h3>
             <ul>
               <li><a href="./emitidosCliente">Pedidos</a></li>
             </ul>
           </div>
-
           <div class="col">
             <h3>Ajuda</h3>
             <ul>
@@ -47,7 +37,6 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
   <nav class="navbar navbar-light bg-dark">
@@ -59,36 +48,33 @@
       </button>
     </div>
   </nav>
-
   <img src="../assets/images/ImgLogoHome.png" class="logoHome">
-
   <section>
     <img src="../assets/images/emitirPedido01.png" class="imgEmitidoUm">
     <div class="container h-100">
       <div class="card mx-auto w-75 cardBemVi">
         <div class="card-body">
-          <h1 class="text-center titleEmitidos">Status pedido</h1>
-          
-          <div class="row campos">
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="numPedido" class="labelNum">N° PEDIDOS</label>
-                <input type="text" name="numPedido" id="numPedido" class="inputnumPedido">
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="inputnNomePedido" class="labelNome">NOME DO CLIENTE</label>
-                <input type="text" name="inputnNomePedido" id="inputnNomePedido" class="inputnNomePedido">
+          <h1 class="text-center titleEmitidos">Pedidos do Cliente</h1>
+          <div class="row">
+            <div class="col-12">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>N° Pedido</th>
+                    <th>Cliente</th>
+                    <th>Status</th>
+                    <th>Data</th>
+                  </tr>
+                </thead>
+                <tbody id="pedidoTabela"></tbody>
+              </table>
             </div>
           </div>
-        
         </div>
       </div>
     </div>
   </section>
-
   <img src="../assets/images/emitirPedido02.png" class="imgEmitidoDois">
+  <script src="/assets/scripts/global.js"></script>
 </body>
-<script src="/assets/scripts/global.js"></script>
 </html>
