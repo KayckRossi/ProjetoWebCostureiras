@@ -7,36 +7,16 @@
   <script src="/assets/plugins/node_modules/bootstrap/dist/js/bootstrap.js"></script>
   <script src="/assets/plugins/node_modules/jquery/dist/jquery.js"></script>
   <script src="/assets/plugins/node_modules/jquery-ui/dist/jquery-ui.js"></script>
-  <script src="/assets/scripts/clientePedidos.js"></script> 
+  <script src="/assets/scripts/emetidoPedido.js"></script>
   <title>Pedidos do Cliente</title>
+
+
+
 </head>
 <body>
   <div class="collapse" id="navbarToggleExternalContent">
-    <div class="bg-dark p-4">
-      <div class="conteiner-fluid">
-        <div class="row">
-          <div class="col">
-            <h3>Cadastrar</h3>
-            <ul>
-              <li><a href="./cadastroCliente">Cliente</a></li>
-              <li><a href="./cadastroPedido">Pedidos</a></li>
-            </ul>
-          </div>
-          <div class="col">
-            <h3>Movimentação</h3>
-            <ul>
-              <li><a href="./emitidosCliente">Pedidos</a></li>
-            </ul>
-          </div>
-          <div class="col">
-            <h3>Ajuda</h3>
-            <ul>
-              <li><a href="./sobrenos">Sobre nós</a></li>
-              <li><a href="https://wa.link/jf45be">Whatsapp</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+    <div id="dynamicMenu" class="bg-dark p-4">
+      <!-- O menu dinâmico será inserido aqui -->
     </div>
   </div>
   <nav class="navbar navbar-light bg-dark">
@@ -66,7 +46,7 @@
                     <th>Data</th>
                   </tr>
                 </thead>
-                <tbody id="pedidoTabela"></tbody>
+                <tbody id="pedidoTabelaCliente"></tbody>
               </table>
             </div>
           </div>

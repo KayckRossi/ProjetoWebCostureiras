@@ -11,6 +11,8 @@ module.exports = {
                 res.status(500).send('Erro interno do servidor');
             } else {
                 if (result.length > 0) {
+                    req.session.clienteId = result[0].id_cliente;
+                    console.log(req.session.clienteId); // Correção aqui
                     res.status(200).send('success');
                 } else {
                     res.status(200).send('failure');
@@ -18,6 +20,7 @@ module.exports = {
             }
         });
     },
+
     fazerLoginCostureira: function (req, res) {
         const nome = req.body.nome;
         const senha = req.body.senha;
@@ -28,29 +31,12 @@ module.exports = {
                 res.status(500).send('Erro interno do servidor');
             } else {
                 if (result.length > 0) {
-                    // Se o nome de usuário e a senha estiverem corretos, verifica se o usuário é um administrador
-                    if (result[0].isAdmin) {
-                        res.status(200).send('success-admin');
-                    } else {
-                        res.status(200).send('success');
-                    }
+                    req.session.usuarioId = result[0].id_usuario; // Armazena o ID do usuário na sessão
+                    res.status(200).send('success-admin');
                 } else {
                     res.status(200).send('failure');
                 }
             }
         });
     },
-    
-    promoverAdmin: function (req, res) {
-        const nome = req.body.nome;
-
-        loginModel.promoverAdmin(nome, (err, result) => {
-            if (err) {
-                console.error('Erro ao promover usuário:', err);
-                res.status(500).send('Erro interno do servidor');
-            } else {
-                res.status(200).send('Usuário promovido a administrador com sucesso');
-            }
-        });
-    }
 };

@@ -44,6 +44,10 @@ router.get('/emitidos', (req, res) => {
 });
 
 router.get('/emitidosCliente', (req, res) => {
+    console.log('ID do cliente na sessão:', req.session.clienteId);
+    if (!req.session.clienteId) {
+        return res.status(403).send('Cliente não autenticado');
+    }
     res.sendFile(path.join(__dirname,'..', 'view', 'pedidosEmitidosCliente.html'));
 });
 
@@ -55,18 +59,23 @@ router.get('/sobrenos', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'view', 'sobre.html'));
 });
 
+router.get('/meusDados', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'view', 'sobre.html'));
+});
 // Rota para lidar com o formulário de cadastro (método POST)
 router.post('/cadastroCliente', cadastroClienteController.cadastrarCliente);
 router.post('/cadastroUsuario', cadastroUsuarioAdmController.cadastrarUsuario);
 router.post('/cadastroClienteAdm', cadastroUsuarioAdmController.cadastrarClienteAdm);
 
 router.post('/login', loginController.fazerLogin);
+router.post('/loginCostureira', loginController.fazerLoginCostureira);
 
 // Rota para obter a lista de produtos
 router.get('/produtos', pedidoController.obterProdutos);
 router.post('/cadastroPedido', pedidoController.salvarPedido);
 
 router.get('/emitidosAdm', emitidoPedido.obterPedidosEmitidos);
+router.get('/api/emitidosCliente', emitidoPedido.obterPedidosEmitidosPorCliente);
 
 // Rotas para manutenção de clientes
 router.get('/cliente/:id', clienteManuController.buscarCliente);
