@@ -51,7 +51,7 @@ h1 {
   top: 10px;
   content: "•";
   /* Isso adiciona uma bolinha antes de cada item da lista */
-  font-size: 60px;
+  font-size: 40px;
   /* Isso ajusta o tamanho da bolinha */
   color: rgb(7, 7, 7);
   padding-right: 10px;
@@ -74,7 +74,7 @@ body.menu-open {
 .conteiner-fluid a {
   text-decoration: none !important;
   color: #000000 !important;
-  font-size: 25px;
+  font-size: 23px;
   font-weight: 900;
 }
 
