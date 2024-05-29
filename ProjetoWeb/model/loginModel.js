@@ -12,6 +12,16 @@ module.exports = {
             callback(err, result);
         });
     },
+
+    obterDadosCliente: function (clienteId, callback) {
+        db.query('SELECT * FROM cliente WHERE id_cliente = ?', [clienteId], (err, result) => {
+            if (err) {
+                console.error('Erro ao obter dados do cliente:', err);
+            }
+            callback(err, result);
+        });
+    },
+    
     fazerLoginCostureira: function (nome, senha, callback) {
         console.log(`Consulta de login para costureira: ${nome}`);
         db.query('SELECT * FROM usuario WHERE nome = ? AND senha = ?', [nome, senha], (err, result) => {

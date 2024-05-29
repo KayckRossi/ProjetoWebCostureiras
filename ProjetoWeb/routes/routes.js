@@ -69,6 +69,8 @@ router.post('/cadastroClienteAdm', cadastroUsuarioAdmController.cadastrarCliente
 
 router.post('/login', loginController.fazerLogin);
 router.post('/loginCostureira', loginController.fazerLoginCostureira);
+router.get('/dadosCliente', loginController.obterDadosCliente);
+
 
 // Rota para obter a lista de produtos
 router.get('/produtos', pedidoController.obterProdutos);

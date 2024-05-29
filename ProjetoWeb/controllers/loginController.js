@@ -24,6 +24,25 @@ module.exports = {
         });
     },
 
+    obterDadosCliente: function (req, res) {
+        if (!req.session.clienteId) {
+            return res.status(403).send('Cliente não autenticado');
+        }
+
+        loginModel.obterDadosCliente(req.session.clienteId, (err, result) => {
+            if (err) {
+                console.error('Erro ao obter dados do cliente:', err);
+                return res.status(500).send('Erro interno do servidor');
+            }
+
+            if (result.length > 0) {
+                res.status(200).json(result[0]);
+            } else {
+                res.status(404).send('Cliente não encontrado');
+            }
+        });
+    },
+
     fazerLoginCostureira: function (req, res) {
         const nome = req.body.nome;
         const senha = req.body.senha;
