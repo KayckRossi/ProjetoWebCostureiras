@@ -26,6 +26,10 @@
   top: 50px; /* Ajuste este valor para mover a imagem para cima ou para baixo */
 }
 
+.imgCostureira.menu-open-img {
+  top: 350px;
+}
+
 .imgMaquina{
   margin-top: -10rem;
 }

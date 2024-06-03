@@ -9,7 +9,7 @@ const pedidoController = require('../controllers/cadastroPedidoController.js');
 const emitidoPedido = require('../controllers/emitidoPedidoController.js');
 const clienteManuController = require('../controllers/clienteManuController.js'); 
 const pedidoManuController = require('../controllers/pedidoManuController.js');
-
+const clienteCadastrado = require('../controllers/clientesCadastradosController.js')
 // Rotas de páginas
 router.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'view', 'login.html'));
@@ -51,6 +51,10 @@ router.get('/emitidosCliente', (req, res) => {
     res.sendFile(path.join(__dirname,'..', 'view', 'pedidosEmitidosCliente.html'));
 });
 
+router.get('/Clientes', (req, res) => {
+    res.sendFile(path.join(__dirname,'..', 'view', 'clienteCadastrados.html'));
+});
+
 router.get('/bemvindo', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'view', 'bemvindo.html'));
 });
@@ -69,6 +73,7 @@ router.post('/cadastroClienteAdm', cadastroUsuarioAdmController.cadastrarCliente
 
 router.post('/login', loginController.fazerLogin);
 router.post('/loginCostureira', loginController.fazerLoginCostureira);
+router.post('/redefinirSenha', loginController.redefinirSenha);
 router.get('/dadosCliente', loginController.obterDadosCliente);
 
 
@@ -78,6 +83,7 @@ router.post('/cadastroPedido', pedidoController.salvarPedido);
 
 router.get('/emitidosAdm', emitidoPedido.obterPedidosEmitidos);
 router.get('/api/emitidosCliente', emitidoPedido.obterPedidosEmitidosPorCliente);
+router.get('/clientesCadastrados', clienteCadastrado.obterClienteCadastrados);
 
 // Rotas para manutenção de clientes
 router.get('/cliente/:id', clienteManuController.buscarCliente);

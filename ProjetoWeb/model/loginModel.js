@@ -33,4 +33,14 @@ module.exports = {
             callback(err, result);
         });
     },
+
+    redefinirSenha: function (nome, novaSenha, callback) {
+        db.query('UPDATE cliente SET senha = ? WHERE nome_cliente = ?', [novaSenha, nome], (err, result) => {
+            if (err) {
+                console.error('Erro ao redefinir a senha do cliente:', err);
+            }
+            callback(err, result);
+        });
+    }
+    
 };

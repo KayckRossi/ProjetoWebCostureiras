@@ -1,8 +1,8 @@
- const cadastroPedidoModel = require('../model/cadastroPedidoModel');
+const cadastroPedidoModel = require('../model/cadastroPedidoModel');
 
-exports.obterProdutos = function(req, res) {
+exports.obterProdutos = function (req, res) {
   // Chame o método do modelo para obter os produtos do banco de dados
-  cadastroPedidoModel.obterProdutos(function(err, produtos) {
+  cadastroPedidoModel.obterProdutos(function (err, produtos) {
     if (err) {
       console.error('Erro ao obter os produtos:', err);
       res.status(500).send('Erro interno do servidor');
@@ -12,7 +12,7 @@ exports.obterProdutos = function(req, res) {
   });
 };
 
-exports.salvarPedido = function(req, res) {
+exports.salvarPedido = function (req, res) {
   const { id_cliente, id_produto, medidas, valor, quantidade, forma_pagamento, data_retirada } = req.body;
 
   const novoPedido = {
@@ -25,7 +25,7 @@ exports.salvarPedido = function(req, res) {
     data_retirada
   };
 
-  cadastroPedidoModel.salvarPedido(novoPedido, function(err, result) {
+  cadastroPedidoModel.salvarPedido(novoPedido, function (err, result) {
     if (err) {
       console.error('Erro ao salvar o pedido:', err);
       res.status(500).send('Erro ao salvar o pedido. Por favor, tente novamente mais tarde.');

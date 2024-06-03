@@ -66,4 +66,21 @@ module.exports = {
             }
         });
     },
+
+    redefinirSenha: function (req, res) {
+        const nome = req.body.nome;
+        const novaSenha = req.body.novaSenha;
+        
+        console.log(`Tentativa de redefinição de senha para o cliente: ${nome}`);
+    
+        loginModel.redefinirSenha(nome, novaSenha, (err, result) => {
+            if (err) {
+                console.error('Erro ao redefinir a senha:', err);
+                res.status(500).send('Erro interno do servidor');
+            } else {
+                res.status(200).send('success');
+            }
+        });
+    }
+    
 };

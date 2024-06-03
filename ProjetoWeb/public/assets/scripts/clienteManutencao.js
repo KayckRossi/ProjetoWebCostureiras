@@ -32,7 +32,6 @@ $(document).ready(function() {
     const telefone = $('#manuPedidoTelefone').val();
     const endereco = $('#manuPedidoEndereco').val();
 
-    // Adicione logs no frontend para verificar os dados antes de enviar
     console.log('Dados enviados para atualização:', { nome_cliente, telefone, endereco });
 
     if (idCliente && nome_cliente && telefone && endereco) {
@@ -55,6 +54,12 @@ $(document).ready(function() {
             text: 'Erro ao atualizar o cliente.',
           });
         }
+      });
+    } else {
+      Swal.fire({
+        icon: 'error',
+        title: 'Erro',
+        text: 'Todos os campos são obrigatórios',
       });
     }
   });
@@ -91,10 +96,14 @@ $(document).ready(function() {
               $('#idClienteManun').val('');
             },
             error: function(xhr, status, error) {
+              let errorMessage = 'Erro ao excluir o cliente.';
+              if (xhr.status === 400) {
+                errorMessage = 'Cliente possui pedido, exclusão não permitida';
+              }
               Swal.fire({
                 icon: 'error',
                 title: 'Erro',
-                text: 'Erro ao excluir o cliente.',
+                text: errorMessage,
               });
             }
           });

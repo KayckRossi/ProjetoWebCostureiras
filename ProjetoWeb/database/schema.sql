@@ -28,7 +28,6 @@ INSERT INTO `produto` (`id_produto`, `nome_produto`, `valor`) VALUES
 ('18', 'Punho de blusa social', '25.00'),
 ('19', 'Alterar colarinho', '30.00'),
 ('20', 'Trocar botão', '15.00'
-
 );
 
 create table cliente(

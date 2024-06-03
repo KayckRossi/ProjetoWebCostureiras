@@ -30,7 +30,7 @@ app.use('/plugins/bootstrap', express.static(path.join(__dirname, 'public', 'ass
 app.use('/', routes);
 
 app.get('/', (req, res) => {
-    res.redirect("/bemvindo");
+    res.redirect("/home");
 });
 
 app.listen(port, () => {

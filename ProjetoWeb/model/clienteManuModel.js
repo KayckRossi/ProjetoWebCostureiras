@@ -10,6 +10,10 @@ module.exports = {
     db.query('UPDATE cliente SET nome_cliente = ?, telefone = ?, endereco = ? WHERE id_cliente = ?', [nome_cliente, telefone, endereco, clienteId], callback);
   },
 
+  verificarPedidosPorCliente: (clienteId, callback) => {
+    db.query('SELECT * FROM pedido WHERE id_cliente = ?', [clienteId], callback);
+  },
+
   excluirCliente: (clienteId, callback) => {
     db.query('DELETE FROM cliente WHERE id_cliente = ?', [clienteId], callback);
   }

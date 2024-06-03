@@ -8,7 +8,7 @@ $(document).ready(function() {
         url: `/api/pedido/${idPedido}`,
         method: 'GET',
         success: function(data) {
-          console.log('Dados do pedido:', data); // Adicionado para verificar os dados recebidos
+          console.log('Dados do pedido:', data);
 
           $('#manuPedidoNome').val(data.nome_produto);
           $('#manuPedidoQtd').val(data.quantidade_produto);

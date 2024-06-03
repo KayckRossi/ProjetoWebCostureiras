@@ -44,7 +44,8 @@
 
             <div class="col-3 inputsLogin">
               <label for="SenhaCadastro">Senha</label>
-              <input type="password" name="senhaCadastro" id="SenhaLogin">
+              <input type="password" name="senhaCadastro" id="SenhaLogin" autocomplete="current-password">
+
             </div>
 
           </div>
@@ -54,7 +55,7 @@
             <button type="submit" class="btn btn-dark col-3 btnCliLog" id="btn-Costureira">Costureira</button>
           </div>
 
-          <h3 class="text-center esqueceuSenhaLogin">Esqueceu a senha</h3>
+          <h3 class="text-center esqueceuSenhaLogin"><a href="#" id="esqueceuSenhaLink">Esqueceu a senha</a></h3>
         </form>
 
 
@@ -63,6 +64,36 @@
 
     <img src="../assets/images/ImgLoginCostuDois.jpg" class="imgLoginDois" alt="">
   </section>
+
+  <div class="modal fade" id="esqueceuSenhaModal" tabindex="-1" aria-labelledby="esqueceuSenhaModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="esqueceuSenhaModalLabel">Redefinir Senha</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="redefinirSenhaForm">
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="nome" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="novaSenha" class="form-label">Nova Senha</label>
+                        <input type="password" class="form-control" id="novaSenha" required autocomplete="new-password">
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirmarSenha" class="form-label">Confirmar Senha</label>
+                        <input type="password" class="form-control" id="confirmarSenha" required autocomplete="new-password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Alterar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
   <script src="/assets/scripts/global.js"></script>
 </body>
 
