@@ -17,13 +17,13 @@ body{
   display: block;
   width: 80px;
   height: 80px;
-  margin-left: 50px;
+  margin-left: 90px;
 }
 
 .labelNum {
   font-size: large;
   letter-spacing: 2px;
-  margin-left: 30px;
+  margin-left: 120px;
 }
 
 .btnExecutar {
@@ -98,6 +98,10 @@ body{
   margin-left: 40px;
 }
 
+.Executar{
+  margin-left: 270px;
+}
+
 @media screen and (max-width:1440px) {
   .titlePedido {
     font-family: 'Balmy';
@@ -111,13 +115,13 @@ body{
     display: block;
     width: 80px;
     height: 80px;
-    margin-left: 50px;
+    margin-left: 90px;
   }
   
   .labelNum {
     font-size: large;
     letter-spacing: 2px;
-    margin-left: 30px;
+    margin-left: 120px;
   }
   
   .btnExecutar {
@@ -178,7 +182,7 @@ body{
     justify-content: center;
     font-size: x-large;
     letter-spacing: 2px;
-    margin-left: -60px;
+    margin-left: -20px;
     margin-top: 10px;
   }
   

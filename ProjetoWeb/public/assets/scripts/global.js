@@ -5,8 +5,18 @@ $(document).ready(function () {
         $('.imgCriarConta1').toggleClass('menu-open-img');
         $('.imgEmitidoUm').toggleClass('menu-open-img');
         $('.imgCostureira').toggleClass('menu-open-img');
+        $('.imgManequinPedido').toggleClass('menu-open-img');
+        $('..imgEmitidoUm').toggleClass('menu-open-img');
     });
 
+    $('#sairBtn').click(function (event) {
+        event.preventDefault();
+
+        window.location.href = '/home';
+
+        console.log('Botão Sair clicado');
+    });
+    
     $('#btn-HomeCadastro').click(function (event) {
         window.location.href = '/cadastroUsuario';
     });
@@ -203,17 +213,17 @@ $(document).ready(function () {
 
     $('#redefinirSenhaForm').on('submit', function (event) {
         event.preventDefault();
-    
+
         var novaSenha = $('#novaSenha').val();
         var confirmarSenha = $('#confirmarSenha').val();
-    
+
         if (novaSenha !== confirmarSenha) {
             Swal.fire('Erro', 'As senhas não coincidem', 'error');
             return;
         }
-    
+
         var nome = $('#nome').val(); // Obter o nome do campo de formulário
-    
+
         Swal.fire({
             title: 'Você tem certeza?',
             text: "Deseja realmente alterar sua senha?",
@@ -252,5 +262,5 @@ $(document).ready(function () {
             }
         });
     });
-    
+
 });

@@ -19,6 +19,8 @@ module.exports = {
     );
   },
 
+  
+
   excluirPedido: (pedidoId, callback) => {
     db.query('DELETE FROM pedido WHERE id_pedido = ?', [pedidoId], callback);
   }

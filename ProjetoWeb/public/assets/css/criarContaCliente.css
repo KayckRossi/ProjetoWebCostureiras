@@ -111,6 +111,10 @@ form {
     width: 200px;
   }
 
+  .imgCriarConta1.menu-open-img {
+    top: 800px;
+  }
+
   .imgCriarContaBotao3 {
     display: flex;
     flex-direction: column;

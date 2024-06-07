@@ -119,12 +119,4 @@ $(document).ready(function () {
 
     console.log('Botão Excluir clicado');
   });
-
-  $('#sairBtn').click(function (event) {
-    event.preventDefault();
-
-    window.location.href = '/home';
-
-    console.log('Botão Sair clicado');
-  });
 });

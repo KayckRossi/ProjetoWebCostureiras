@@ -33,10 +33,10 @@ h1 {
   background-color: #FFD3D3 !important;
 }
 
-.navbar-toggler-icon {
+/* .navbar-toggler-icon {
   fill: #ff0000;
-  /* cor vermelha como exemplo */
-}
+  
+} */
 
 .uLmenus li::marker {
   font-size: 2rem !important;
@@ -111,7 +111,7 @@ body.menu-open {
 
 @media screen and (max-width: 1440px) {
   .colMovi {
-    margin-right: 300px !important;
-    margin-left: 300px !important;
+    margin-right: 220px !important;
+    margin-left: 220px !important;
   }
 }

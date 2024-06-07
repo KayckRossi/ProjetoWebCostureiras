@@ -14,22 +14,39 @@
 
 .textBv{
   margin: 0 auto;
-  margin-top: 30px;
   text-align: center;
   font-size: 30px;
   width: 720px;
 }
 
 .imgCostureira {
+  width: 304px;
+  height: 295px;
   position: absolute;
   right: 0;
-  top: 50px; /* Ajuste este valor para mover a imagem para cima ou para baixo */
+  top: 50px; 
 }
 
 .imgCostureira.menu-open-img {
-  top: 350px;
+  top: 400px;
 }
 
 .imgMaquina{
   margin-top: -10rem;
+}
+
+@media screen and (max-width: 1440px) {
+  .imgCostureira {
+    width: 404px;
+    height: 395px;
+    position: absolute;
+    right: 0;
+    top: 50px; 
+  }
+
+  .imgMaquina{
+    width: 453px;
+    height: 351px;
+    margin-top: -25rem;
+  }
 }
